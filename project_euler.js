@@ -493,7 +493,7 @@ function latticePaths(gridSize) {
   numOfPaths = movesFactorial / gridFactorial / gridFactorial;
   console.log(numOfPaths);
 }
-latticePaths(20);     
+latticePaths(20);
 
 
 
@@ -542,20 +542,35 @@ latticePaths(20);
 
 
 
-function alphabetPosition(text) {
-  var strValue = ""
-  for (i = 0; i < text.length; i++) {
-    if (!isNaN(parseInt(text.charAt(i), 36) - 9)) {
-    strValue = strValue.concat(text.charAt(i).charCodeAt() -96) + " ");
-    }
-  }
-  var newStr = strValue.substring(0, strValue.length-1);
-  return newStr;
+function foldArray(array, runs) {
+
 }
 
-alphabetPosition("hello")
 
-'a'.charCodeAt() - 96; // 1
+
+
+
+
+
+var palindromeChainLength = function(n) {
+  var num = n;
+  var nStr = num.toString();
+  var numOfSteps = 0;
+  var isPalindrome = false;
+  while (isPalindrome = false) {
+    if (nStr.length % 2 == 0) {
+      for (var i = 0; i < nStr.length; i++){
+        if (nStr.charAt(i) != nStr.charAt(nStr.length - 1 - i)){
+          num = num + parseInt(num.split("").reverse().join(""));
+          nStr = num.toString();
+          numOfSteps++;
+          break;
+        }
+      }
+    }
+  }
+
+};
 
 
 
